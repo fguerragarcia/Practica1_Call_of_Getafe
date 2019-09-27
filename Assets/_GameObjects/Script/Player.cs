@@ -10,14 +10,14 @@ public class Player : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButtonDown(0)) {
 
             Disparar();
         }
 
     }
 
-    private void Disparar() {
+    void Disparar() {
 
         print("Shoot");
         revolver.Disparar();    

@@ -21,6 +21,12 @@ public class Revolver : MonoBehaviour
         
     }
 
+    public void Recargar(int numeroBalasCaja)
+    {
+        numeroBalas = Mathf.Min(numeroBalas + numeroBalasCaja,capacidadCargador);
+        txtNumeroBalas.text = numeroBalas.ToString();
+    }
+
     public void Disparar() {
 
         if (numeroBalas > 0)

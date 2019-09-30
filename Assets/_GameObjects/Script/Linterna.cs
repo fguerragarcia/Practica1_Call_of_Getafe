@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Linterna : MonoBehaviour
 {
-    [SerializeField] GameObject Linterna;
+    [SerializeField] GameObject linterna;
 
     
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.F)) {
-            Linterna.SetActive(!Linterna.activeSelf);
+            linterna.SetActive(!linterna.activeSelf);
         }
     }
 }

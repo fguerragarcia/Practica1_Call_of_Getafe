@@ -6,17 +6,20 @@ public class Player : MonoBehaviour
 {
     [SerializeField] Revolver revolver;
    
-   
-    void Update()
+    private void Update()
     {
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(0)) {   
 
             Disparar();
         }
 
-    }
+    } 
+    public void Recargar(int numeroBalas) {
 
+        revolver.Recargar(numeroBalas);
+    }
+    
     void Disparar() {
 
         print("Shoot");

@@ -120,7 +120,7 @@ Transform:
   m_Children:
   - {fileID: 122652388347573630}
   m_Father: {fileID: 122652389402078569}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 180, y: 90, z: 90}
 --- !u!1 &122652389119729554
 GameObject:
@@ -233,8 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d49cb979d85e042881f3940b6c45b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBala: {fileID: 197692, guid: e8286d951bbbef9469950c7b167ca52d, type: 3}
-  transformPuntoDeDisparo: {fileID: 122652388791534524}
+  prefabBala: {fileID: 8967459965849019770, guid: e5d2ae22068fc3444a985f45a0712943,
+    type: 3}
+  transformPuntoDeDisparo: {fileID: 122652388347573630}
   fuerzaDisparo: 700
   txtNumeroBalas: {fileID: 122652389770387506}
   numeroBalas: 0

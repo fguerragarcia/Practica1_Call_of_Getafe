@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 7336565108346970989}
   m_Layer: 0
   m_Name: prefabBala
-  m_TagString: Untagged
+  m_TagString: Proyectil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -133,7 +133,7 @@ Transform:
   m_GameObject: {fileID: 8967459965849019770}
   m_LocalRotation: {x: -0, y: -0.9535267, z: -0, w: -0.30130866}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 8213851749385892756}
   m_Father: {fileID: 0}

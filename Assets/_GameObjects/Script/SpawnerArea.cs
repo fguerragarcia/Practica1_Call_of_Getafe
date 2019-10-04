@@ -8,9 +8,9 @@ public class SpawnerArea : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] float delay;
     [SerializeField] int limit;
-    [SerializeField] Transform limiteSuperior;
-    [SerializeField] Transform limiteInferior;
     private int numeroInstancias;
+    SpawnerArea spawnerArea;
+
 
     void Start()
     {
@@ -19,9 +19,6 @@ public class SpawnerArea : MonoBehaviour
 
     void Spawnear()
     {
-        float x = Random.Range(limiteInferior.position.x, limiteSuperior.position.x);
-        float y = transform.position.y;
-        float z = Random.Range(limiteInferior.position.z, limiteSuperior.position.z);
         Instantiate(prefab, transform.position, transform.rotation);
         numeroInstancias++;//Es lo mismo que numeroInstancias=numeroInstancias+1;
         if (numeroInstancias == limit)

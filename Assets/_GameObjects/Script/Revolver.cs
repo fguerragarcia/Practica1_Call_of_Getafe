@@ -9,7 +9,7 @@ public class Revolver : MonoBehaviour
     [SerializeField] GameObject prefabBala;
     [SerializeField] Transform transformPuntoDeDisparo;
     [SerializeField] float fuerzaDisparo;
-    int capacidadCargador = 6;
+    int capacidadCargador = 6000;
     [SerializeField] Text txtNumeroBalas;
     
     public int numeroBalas;

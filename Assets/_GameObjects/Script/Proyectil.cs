@@ -5,6 +5,7 @@ using UnityEngine;
 public class Proyectil : MonoBehaviour
 {
     [SerializeField] int danyo;
+    public GameObject prefabHit;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -15,6 +16,11 @@ public class Proyectil : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if (collision.gameObject.CompareTag("Target"))
+        {
+            Instantiate(prefabHit, transform.position, transform.rotation);
+
+        }
     }
 
 }

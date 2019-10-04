@@ -10,7 +10,7 @@ public class EnemyMobile : Enemy
 
     public void Start()
     {
-        base.Start();
+        
         InvokeRepeating("Rotar", tiempoEntreRotacion, tiempoEntreRotacion);
     }
 

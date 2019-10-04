@@ -7,28 +7,23 @@ public class Enemy : MonoBehaviour
     public int vida;
     public int danyo;//Que infringe al player
     public GameObject prefabExplosion;
-    [SerializeField] TextMesh textoVida;
+    //[SerializeField] TextMesh textoVida;
 
-    public void Start()
-    {
-        textoVida = GetComponent<TextMesh>();
-        print("TM:" + textoVida);
-        textoVida.text = vida.ToString();
-
-
-    }
+    //public void Start()
+    //{
+    //    textoVida = GetComponent<TextMesh>();
+    //    print("TM:" + textoVida);
+    //    textoVida.text = vida.ToString();
+    //}
 
     public void Atacar() {
-
-
-
+        
     }
 
     public void Morir() {
 
         Instantiate(prefabExplosion, transform.position, transform.rotation);
         Destroy(gameObject);
-
     }
 
     public void RecibirDanyo(int danyoRecibido)
@@ -38,8 +33,7 @@ public class Enemy : MonoBehaviour
         if (vida <= 0) {
             Morir();
         }
-
-
+        
     }
 
 }

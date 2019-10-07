@@ -4,25 +4,48 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] Revolver revolver;
-   
+    [SerializeField] Arma[] armas;
+    
+
+    private void Start()
+    {
+        
+    }
+
     private void Update()
     {
 
-        if (Input.GetMouseButtonDown(0)) {   
+        if (Input.GetMouseButtonDown(0)) {
 
-            Disparar();
+            ApretarGatillo();
         }
+        
+
 
     } 
-    public void Recargar(int numeroBalas) {
-
-        revolver.Recargar(numeroBalas);
-    }
     
-    void Disparar() {
+    
+    void ApretarGatillo() {
+
+        IntentarDisparar();
 
         print("Shoot");
-        revolver.Disparar();    
+        //revolver.Disparar();
+        
+
+    }
+
+   
+
+    void ActivarArma(int numeroArma) {
+
+        if (numeroArma != armaActiva) {
+
+            armas[armaActiva].gameObject.SetActive(false);
+            armaActiva = numeroArma;
+            armas[armaActiva].gameObject.SetActive(true);
+            
+        }
+        
     }
 }

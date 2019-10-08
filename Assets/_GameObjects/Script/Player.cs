@@ -5,39 +5,51 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] Arma[] armas;
-    
 
-    private void Start()
-    {
-        
-    }
+    [SerializeField] int armaActiva = 0;
 
     private void Update()
     {
-
-        if (Input.GetMouseButtonDown(0)) {
-
+        
+        if (Input.GetMouseButtonDown(0))
+        {
             ApretarGatillo();
         }
+
+        //Recarga
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Recargar();
+        }
+
+
+        //Gestion de armas
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            ActivarArma(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            ActivarArma(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            ActivarArma(2);
+        }
+        else if (Input.GetKeyDown("4"))
+        {
+            ActivarArma(3);
+        }
         
-
-
-    } 
-    
-    
-    void ApretarGatillo() {
-
-        IntentarDisparar();
-
-        print("Shoot");
-        //revolver.Disparar();
-        
-
     }
 
-   
+    
 
     void ActivarArma(int numeroArma) {
+
+        if (numeroArma >= armas.Length) {
+            return;
+        }
 
         if (numeroArma != armaActiva) {
 
@@ -47,5 +59,21 @@ public class Player : MonoBehaviour
             
         }
         
+    }
+
+    public void Recargar()
+    {
+        armas[armaActiva].Recargar();
+    }
+
+    void ApretarGatillo()
+    {
+
+        armas[armaActiva].IntentarDisparar();
+
+        print("Gatillo");
+
+
+
     }
 }

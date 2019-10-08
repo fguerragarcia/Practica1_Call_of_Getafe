@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puntuacion : MonoBehaviour
+/*public class Puntuacion : MonoBehaviour
 {
     [SerializeField] TextMesh PanelPuntuacion;
     public int puntuacion;
@@ -13,3 +13,4 @@ public class Puntuacion : MonoBehaviour
         PanelPuntuacion.text = puntuacion.ToString();
     }
 }
+*/

@@ -11,7 +11,7 @@ public class CajaMunicion : MonoBehaviour
         {
             print("CHOQUE");
 
-            other.gameObject.GetComponent<Player>().Recargar(numeroBalasCaja);
+            //other.gameObject.GetComponent<Player>().Recargar(numeroBalasCaja);
 
             Destroy(gameObject);
 

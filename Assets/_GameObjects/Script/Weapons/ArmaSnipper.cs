@@ -7,12 +7,13 @@ public class ArmaSnipper : Arma
 
     [Header("Zoom")]
     [SerializeField] Camera camara;
+    [SerializeField] Transform puntoDisparo;
 
     private void Update()
     {
         //base.Update();
         if (Input.GetMouseButtonDown(1)) {
-
+            
             camara.fieldOfView = 10;
             print("Zoom");
             //modifico el Field of View 

@@ -30,8 +30,7 @@ public abstract class Arma : MonoBehaviour
     [SerializeField] AudioClip acReload;
     [SerializeField] AudioClip acFail;
     public AudioSource audioSource;
-
-
+    
 
     private void Start()
     {
@@ -45,17 +44,25 @@ public abstract class Arma : MonoBehaviour
 
     public void IntentarDisparar() {
 
-        bool puedeDisparar = municionCargador > 0 && recargando == false && esperandoCadencia == false;
-        if (puedeDisparar)
+        bool tieneMunicion = municionCargador > 0;
+        bool puedeDisparar = recargando == false && esperandoCadencia == false;
+
+
+        if (tieneMunicion)
         {
-            Disparar();
-            audioSource.PlayOneShot(acShoot);
-            PostDisparar();
+            if (puedeDisparar)
+            {
+                Disparar();
+                audioSource.PlayOneShot(acShoot);
+                PostDisparar();
+            }
+
         }
-        else{
-             audioSource.PlayOneShot(acFail);
+        else
+        {
+            audioSource.PlayOneShot(acFail);
         }
-        
+
     }
 
     public abstract void Disparar();

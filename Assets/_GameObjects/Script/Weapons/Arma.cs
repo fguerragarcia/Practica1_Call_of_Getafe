@@ -32,7 +32,7 @@ public abstract class Arma : MonoBehaviour
     public AudioSource audioSource;
     
 
-    private void Start()
+    public void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }

@@ -12,6 +12,8 @@ public class Proyectil : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy")) {
 
+            print("DAÑO");
+
             collision.gameObject.GetComponent<Enemy>().RecibirDanyo(danyo);
             Destroy(gameObject);
         }

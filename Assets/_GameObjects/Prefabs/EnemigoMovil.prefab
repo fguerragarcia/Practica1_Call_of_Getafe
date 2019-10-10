@@ -124,16 +124,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5733865294867328994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -9.583551e-11, y: -0.0000000037252899, z: -0.0000000018601782,
+    w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 13.545618}
+  m_LocalScale: {x: 0.004542145, y: 0.0045421356, z: 0.004542145}
   m_Children: []
   m_Father: {fileID: 4564620701197031463}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.07, y: 4.6}
+  m_AnchoredPosition: {x: -6.4653554, y: -3.5327477}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &7542373975375014179
@@ -2461,9 +2462,9 @@ GameObject:
   - component: {fileID: 7155317440674706088}
   - component: {fileID: 7067129343863685194}
   - component: {fileID: 7152559190419076768}
-  - component: {fileID: 8739174427013100476}
+  - component: {fileID: 8854665890665081513}
   m_Layer: 0
-  m_Name: Basic_BanditPrefab
+  m_Name: EnemigoMovil
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2477,8 +2478,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7152124340854686082}
   m_LocalRotation: {x: -0, y: -0.9986756, z: -0, w: 0.0514513}
-  m_LocalPosition: {x: 20.141296, y: 0.6800003, z: 26.054955}
-  m_LocalScale: {x: 1.3743414, y: 1.3743385, z: 1.3743414}
+  m_LocalPosition: {x: 590.54, y: 315.93, z: 13.546}
+  m_LocalScale: {x: 0.0153981205, y: 0.015398088, z: 0.0153981205}
   m_Children:
   - {fileID: 7155317441187670212}
   - {fileID: 7155317441288259422}
@@ -2521,7 +2522,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.9447471, z: 1}
   m_Center: {x: 0, y: 0.8788324, z: 0}
---- !u!114 &8739174427013100476
+--- !u!114 &8854665890665081513
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2535,10 +2536,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vida: 100
   danyo: 0
-  prefabExplosion: {fileID: 0}
+  prefabExplosion: {fileID: 1488825894384350, guid: 46d4eddf844d2514fb79db11ee0f38e9,
+    type: 3}
   textoVida: {fileID: 1089349839290240270}
-  speed: 6
-  tiempoEntreRotacion: 3
+  player: {fileID: 0}
+  speed: 7
+  tiempoEntreRotacion: 2
 --- !u!1 &7152124341100273564
 GameObject:
   m_ObjectHideFlags: 0

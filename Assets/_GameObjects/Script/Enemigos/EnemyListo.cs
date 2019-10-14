@@ -14,7 +14,7 @@ public class EnemyListo : EnemyMobile
         if (distanceToPlayer <= followDistance)
         {
 
-            Vector3 target = New Vector3(player.transform.x, transform.z, transform.y);
+            Vector3 target = new Vector3(player.transform.position.x, transform.position.z, transform.position.y);
 
             estado = ESTADO.Siguiendo;
             transform.LookAt(player.transform);

@@ -21,6 +21,11 @@ public class Enemy : MonoBehaviour
     public void Start()
     {
         player = GameObject.Find("Player");
+        
+    }
+
+    private void Update()
+    {
         textoVida.text = vida.ToString();
     }
 

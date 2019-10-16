@@ -76,14 +76,9 @@ public abstract class Arma : MonoBehaviour
             municionCargador = capacidadCargador;
             numeroCargadores--;
             Invoke("ReiniciarCargando", tiempoRecarga);
-           
-
-        }
-        
+        }  
     }
-
-   
-
+    
     public void IncrementarCargador(int numeroCargadores)
     {
         this.numeroCargadores = this.numeroCargadores + numeroCargadores;

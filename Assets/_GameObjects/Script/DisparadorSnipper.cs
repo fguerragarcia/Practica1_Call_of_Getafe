@@ -2,40 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArmaSnipper : Arma
+public class DisparadorSnipper : MonoBehaviour
 {
-
-    [Header("Zoom")]
-    [SerializeField] Camera camara;
     [SerializeField] Transform puntoDisparo;
-    [SerializeField] GameObject reticulaNormal;
-    [SerializeField] GameObject reticulaSnipper;
-    [SerializeField] GameObject crucetaSniper;
-
     [SerializeField] GameObject prefabMarca;
-
-    private void Update()
+    [SerializeField] float fuerza;
+    void Update()
     {
-        //base.Update();
-        if (Input.GetMouseButtonDown(1)) {
-            
-            camara.fieldOfView = 10;
-             //modifico el Field of View 
-            print("Zoom");
-            reticulaNormal.SetActive(false);
-            reticulaSnipper.SetActive(true);
-            crucetaSniper.SetActive(false);
-
-        } else if (Input.GetMouseButtonUp(1)){
-
-            camara.fieldOfView = 60;
-            reticulaNormal.SetActive(true);
-            reticulaSnipper.SetActive(false);
-            crucetaSniper.SetActive(true);
+        if (Input.GetMouseButton(0))
+        {
+            Fire();
         }
     }
 
-    public override void Disparar()
+    private void Fire()
     {
         RaycastHit rch;
         /*bool hayImpacto = Physics.Raycast(
@@ -61,5 +41,4 @@ public class ArmaSnipper : Arma
             //Debug.DrawRay(rch.point, rch.normal, Color.blue, 10);
         }
     }
-
 }

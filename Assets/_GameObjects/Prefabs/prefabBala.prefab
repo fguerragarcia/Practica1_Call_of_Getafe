@@ -134,7 +134,7 @@ Transform:
   m_GameObject: {fileID: 8967459965849019770}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.14557546, y: 0.14557546, z: 0.14557546}
+  m_LocalScale: {x: 0.38376603, y: 0.38376603, z: 0.38376603}
   m_Children:
   - {fileID: 8213851749385892756}
   m_Father: {fileID: 0}
@@ -169,4 +169,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danyo: 25
-  prefabHit: {fileID: 0}
+  prefabHit: {fileID: 3828539194339494116, guid: bd5ce56037ad5b24cac3355b35ed66c9,
+    type: 3}

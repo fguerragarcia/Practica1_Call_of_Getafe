@@ -21,12 +21,12 @@ public class Enemy : MonoBehaviour
     public void Start()
     {
         player = GameObject.Find("Player");
-        
+        textoVida.text = vida.ToString();
     }
 
     private void Update()
     {
-        textoVida.text = vida.ToString();
+        
     }
 
     public void Atacar() {

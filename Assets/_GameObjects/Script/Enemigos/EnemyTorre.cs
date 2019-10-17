@@ -45,12 +45,31 @@ public class EnemyTorre : Enemy
             transform.rotation = Quaternion.RotateTowards(transform.rotation, q, Time.deltaTime * speed);
             zonaAtaque = true;
         }
-        else {
+        else
+        {
             zonaAtaque = false;
         }
 
-        if (zonaAtaque == true && esperandoCadencia == false) {
-            Disparar();    
+        if (zonaAtaque == true && esperandoCadencia == false)
+        {
+            Disparar();
+        }
+    }
+
+    public void Morir()
+    {
+
+        Instantiate(prefabExplosion, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    public void RecibirDanyo(int danyoRecibido)
+    {
+        vida = vida - danyoRecibido;
+
+        if (vida <= 0)
+        {
+            Morir();
         }
     }
 }

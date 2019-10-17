@@ -63,6 +63,7 @@ Transform:
   - {fileID: 1884397510694426612}
   - {fileID: 7332894579411211951}
   - {fileID: 8606214597012807900}
+  - {fileID: 3979823061269324990}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.0050000004, y: -358.373, z: -0.573}
@@ -81,7 +82,7 @@ MonoBehaviour:
   vida: 251
   danyo: 0
   prefabExplosion: {fileID: 144344, guid: d157fcfc73457ea44b9a125e5be375ca, type: 3}
-  textoVida: {fileID: 0}
+  textoVida: {fileID: 6643762909868356018}
   player: {fileID: 0}
   attackDistance: 20
   speed: 0.1
@@ -130,12 +131,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3109550148276939816}
-  m_LocalRotation: {x: 0.007604644, y: 0.6625131, z: 0.7487357, w: 0.02033163}
-  m_LocalPosition: {x: 0.21086, y: -0.053139, z: 1.4567}
-  m_LocalScale: {x: 0.20001581, y: 0.20001571, z: 0.20001581}
+  m_LocalRotation: {x: -0.008999337, y: 0.9979036, z: 0.060968623, w: 0.019753927}
+  m_LocalPosition: {x: 0.5172094, y: 3.327571, z: -0.11453685}
+  m_LocalScale: {x: 0.547524, y: 0.547523, z: 0.547524}
   m_Children: []
-  m_Father: {fileID: 1884397510666522536}
-  m_RootOrder: 0
+  m_Father: {fileID: 1884397511476877379}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -97.349, y: 197.436, z: -18.468994}
 --- !u!23 &5512718587806659129
 MeshRenderer:

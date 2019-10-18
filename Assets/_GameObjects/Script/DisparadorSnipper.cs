@@ -35,6 +35,9 @@ public class DisparadorSnipper : MonoBehaviour
             //GameObject impacto = Instantiate(prefabMarca, rch.point, Quaternion.identity);
 
             GameObject impacto = Instantiate(prefabMarca, rch.transform);
+            impacto.transform.localScale = new Vector3 (1 / transform.parent.localScale.x,
+                                                       1 / transform.parent.localScale.y,
+                                                       1 / transform.parent.localScale.z);
             impacto.transform.position = rch.point;
             impacto.transform.rotation = Quaternion.FromToRotation(Vector3.back, rch.normal);
             impacto.transform.Translate(Vector3.back * 0.01f);

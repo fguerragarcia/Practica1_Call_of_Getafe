@@ -16,6 +16,11 @@ public class EnemyTorre : Enemy
     [SerializeField] bool zonaAtaque = false;
 
 
+    private void Start()
+    {
+        base.Start();
+    }
+
     protected void PostDisparar()
     {
         esperandoCadencia = true;
@@ -56,20 +61,5 @@ public class EnemyTorre : Enemy
         }
     }
 
-    public void Morir()
-    {
-
-        Instantiate(prefabExplosion, transform.position, transform.rotation);
-        Destroy(gameObject);
-    }
-
-    public void RecibirDanyo(int danyoRecibido)
-    {
-        vida = vida - danyoRecibido;
-
-        if (vida <= 0)
-        {
-            Morir();
-        }
-    }
+   
 }

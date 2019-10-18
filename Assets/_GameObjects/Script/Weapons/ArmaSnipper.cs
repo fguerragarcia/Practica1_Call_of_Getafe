@@ -14,6 +14,10 @@ public class ArmaSnipper : Arma
 
     [SerializeField] GameObject prefabMarca;
 
+    [SerializeField] int danyo;
+
+   
+
     private void Update()
     {
         //base.Update();
@@ -29,7 +33,6 @@ public class ArmaSnipper : Arma
         } else if (Input.GetMouseButtonUp(1)){
 
             camara.fieldOfView = 60;
-            reticulaNormal.SetActive(true);
             reticulaSnipper.SetActive(false);
             crucetaSniper.SetActive(true);
         }
@@ -50,6 +53,15 @@ public class ArmaSnipper : Arma
 
         if (hayImpacto)
         {
+            if (rch.collider.gameObject.CompareTag("Enemy"))
+            {
+
+                print("DAÑO");
+
+                rch.collider.gameObject.GetComponent<Enemy>().RecibirDanyo(danyo);
+                
+            }
+
             print(rch.collider.gameObject.name);
 
             //GameObject impacto = Instantiate(prefabMarca, rch.point, Quaternion.identity);
@@ -61,5 +73,5 @@ public class ArmaSnipper : Arma
             //Debug.DrawRay(rch.point, rch.normal, Color.blue, 10);
         }
     }
-
+    
 }

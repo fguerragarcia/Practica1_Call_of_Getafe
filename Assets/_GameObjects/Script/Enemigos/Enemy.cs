@@ -24,10 +24,7 @@ public class Enemy : MonoBehaviour
         textoVida.text = vida.ToString();
     }
 
-    private void Update()
-    {
-        
-    }
+   
 
     public void Atacar() {
         
@@ -35,14 +32,14 @@ public class Enemy : MonoBehaviour
 
     public void Morir() {
 
-        Instantiate(prefabExplosion, transform.position, transform.rotation);
+        Instantiate(prefabExplosion, new Vector3(transform.position.x, 22.5f, transform.position.z), transform.rotation);
         Destroy(gameObject);
     }
 
     public void RecibirDanyo(int danyoRecibido)
     {
         vida = vida - danyoRecibido;
-
+        textoVida.text = vida.ToString();
         if (vida <= 0) {
             Morir();
         }

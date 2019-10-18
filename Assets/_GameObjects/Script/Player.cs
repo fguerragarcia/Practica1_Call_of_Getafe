@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
         {
             ActivarArma(2);
         }
+
+
         else if (Input.GetKeyDown("4"))
         {
             ActivarArma(3);

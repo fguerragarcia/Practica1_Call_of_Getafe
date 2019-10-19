@@ -6,13 +6,15 @@ public class EnemyMobile : Enemy
 {
     public float speed;
     public float tiempoEntreRotacion;
+   
 
-    private void Start()
+    public void Start()
     {
+        base.Start();
         InvokeRepeating("Rotar", tiempoEntreRotacion, tiempoEntreRotacion);
     }
 
-    private void Update()
+    public void Update()
     {
         Mover();
     }
@@ -24,7 +26,9 @@ public class EnemyMobile : Enemy
     }
 
     public void Rotar() {
-
-        transform.Rotate(0, Random.Range(0, 180), 0);    
+        if (estado != ESTADO.Siguiendo) {
+            transform.Rotate(0, Random.Range(0, 180), 0);
+        }
+            
     }
 }
